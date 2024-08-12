@@ -5,15 +5,187 @@
   <head>
     <meta charset="UTF-8">
     <title>Geometry Dash Blindtest</title>
+    <script src="./tracks.js"></script>
   </head>
 
   <body>
 
     <p align="center" style="font-size:40px;">Website under construction</p>
+    <p align="center" style="font-size:40px;">Geometry Dash Blindtest</p>
 
-    <input id="artist" type="text">
-    <input id="title" type="text">
-    
+    <div style="position:absolute; left:350px; top:200px;">
+      <table style="border:1px solid #000000; width:200px;">
+	<tr>
+	  <td align="center" style="border:1px solid #000000;">Volume</td>
+	</tr>
+	<tr>
+	  <td align="center">
+	    <select id="volume">
+	      <option value="0">0%</option>
+	      <option value="0.05">5%</option>
+	      <option value="0.10">10%</option>
+	      <option value="0.15">15%</option>
+	      <option value="0.20">20%</option>
+	      <option value="0.25">25%</option>
+	      <option value="0.30">30%</option>
+	      <option value="0.35">35%</option>
+	      <option value="0.40">40%</option>
+	      <option value="0.45">45%</option>
+	      <option value="0.50" selected>50%</option>
+	      <option value="0.55">55%</option>
+	      <option value="0.60">60%</option>
+	      <option value="0.65">65%</option>
+	      <option value="0.70">70%</option>
+	      <option value="0.75">75%</option>
+	      <option value="0.80">80%</option>
+	      <option value="0.85">85%</option>
+	      <option value="0.90">90%</option>
+	      <option value="0.95">95%</option>
+	      <option value="1">100%</option>
+	    </select>
+	  </td>
+	</tr>
+      </table>
+    </div>
+
+    <div style="position:absolute; left:350px; top:275px;">
+      <table style="border:1px solid #000000; width:200px;">
+	<tr>
+	  <td align="center" style="border:1px solid #000000;">Extract duration</td>
+	</tr>
+	<tr>
+	  <td align="center">
+	    <select id="duration">
+	      <option value="1">1s</option>
+	      <option value="3">3s</option>
+	      <option value="5">5s</option>
+	      <option value="10" selected>10s</option>
+	      <option value="15">15s</option>
+	      <option value="20">20s</option>
+	      <option value="30">30s</option>
+	      <option value="60">60s</option>
+	    </select>
+	  </td>
+	</tr>
+      </table>
+    </div>
+
+    <div style="position:absolute; left:350px; top:350px;">
+      <table style="border:1px solid #000000; width:200px;">
+	<tr>
+	  <td align="center" style="border:1px solid #000000;">Guess limit</td>
+	</tr>
+	<tr>
+	  <td align="center">
+	    <select id="limit">
+	      <option value="1" selected>1</option>
+	      <option value="2">2</option>
+	      <option value="3">3</option>
+	      <option value="4">4</option>
+	      <option value="5">5</option>
+	    </select>
+	  </td>
+	</tr>
+      </table>
+    </div>
+
+    <div style="position:absolute; left:350px; top:350px;">
+      <table style="border:1px solid #000000; width:200px;">
+	<tr>
+	  <td align="center" style="border:1px solid #000000;">Guess limit</td>
+	</tr>
+	<tr>
+	  <td align="center">
+	    <select id="guesslimit">
+	      <option value="1" selected>1</option>
+	      <option value="2">2</option>
+	      <option value="3">3</option>
+	      <option value="4">4</option>
+	      <option value="5">5</option>
+	    </select>
+	  </td>
+	</tr>
+      </table>
+    </div>
+
+    <div style="position:absolute; left:350px; top:425px;">
+      <table style="border:1px solid #000000; width:200px;">
+	<tr>
+	  <td align="center" style="border:1px solid #000000;" colspan="2">Survival mode</td>
+	</tr>
+	<tr>
+	  <td align="center">Disabled</td>
+	  <td align="center"><input type="checkbox" value="0" id="relax" checked></td>
+	</tr>
+	<tr>
+	  <td align="center">Wrong guess</td>
+	  <td align="center"><input type="checkbox" id="badguess"</td>
+	</tr>
+	<tr>
+	  <td align="center">Wrong artist guess</td>
+	  <td align="center"><input type="checkbox" value="1" id="badartist"</td>
+	</tr>
+	<tr>
+	  <td align="center">Wrong title guess</td>
+	  <td align="center"><input type="checkbox" id="badtitle"</td>
+	</tr>
+      </table>
+    </div>
+
+    <div style="position:absolute; left:100px; top:200px;">
+      <table style="border:1px solid #000000; width:200px;">
+	<tr>
+	  <td align="center" style="border:1px solid #000000;" colspan="2">Song packs</td>
+	</tr>
+	<tr>
+	  <td align="center">None</td>
+	  <td align="center"><input type="checkbox" value="0" id="none" checked></td>
+	</tr>
+	<tr>
+	  <td align="center">All</td>
+	  <td align="center"><input type="checkbox" value="1" id="all"</td>
+	</tr>
+	<tr>
+	  <td align="center">Easy</td>
+	  <td align="center"><input type="checkbox" id="easy"</td>
+	</tr>
+	<tr>
+	  <td align="center">Normal</td>
+	  <td align="center"><input type="checkbox" id="normal"</td>
+	</tr>
+      </table>
+    </div>
+
+    <div style="position:absolute; left:350px; top:575px;">
+      <table style="border:1px solid #000000; width:200px;">
+	<tr>
+	  <td align="center" style="border:1px solid #000000;">Lives</td>
+	</tr>
+	<tr>
+	  <td align="center">
+	    <select id="health">
+	      <option value="1">1</option>
+	      <option value="2">2</option>
+	      <option value="3" selected>3</option>
+	      <option value="4">4</option>
+	      <option value="5">5</option>
+	    </select>
+	  </td>
+	</tr>
+      </table>
+    </div>
+
+    <p align="center">
+      <button type="button">PLAY</button>
+      <button type="button">REPLAY</button>
+      <button type="button">GUESS</button>
+      <button type="button">SHOW ANSWER</button>
+    </p>
+
+<audio controls>
+  <source src="https://audio.ngfiles.com/0/1_newgrounds_consin.mp3?f1121438765" type="audio/mpeg">
+</audio>
+
   </body>
-  
+
 </html>
